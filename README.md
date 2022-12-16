@@ -1,7 +1,7 @@
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 ​
-# <h1 align="center">**`Proyecto Individual 2`**
+# <h1 align="center">**`Datathon Mauro Cadme`**
 
 <p align="center">
 <img src="https://www.ibm.com/blogs/client-voices/wp-content/uploads/2019/09/Glinnt.jpg"   
@@ -9,11 +9,7 @@
 </p>
 
 ​
-¡Bienvenidos al segundo proyecto! Durante estos días estarán poniendo en práctica sus habilidades en el campo de la predicción. Deberán usar cierta métrica para medir la performance del modelo la cual, a su vez, será usada para elegir los mejores modelos.
-​
-## **Información relevante**
-​
-Este proyecto es una instancia de evaluación, por lo cual es INDIVIDUAL y OBLIGATORIO para los alumnos de Data Science de Henry. Se disponibilizará un Google Form y pueden cargarse los resultados las veces que quieran. Es obligatorio que todos disponibilicen el código utilizado, para validar los modelos construidos.
+¡Bienvenidos a este proyecto de Machine Learning! Durante este repositorio me acompañarán en la búsqueda de predecir datos. 
 
 ## 🏥 **Estancia hospitalaria** 🏥
 
@@ -29,37 +25,12 @@ Para esto, se define que un paciente posee estancia hospitalaria prolongada si h
 ​
 ## **Entrega**
 ​
-Deben tener el código en un script .py o Jupyter Notebook .ipynb, el cual debe incluir un buen EDA, feature engineerging y, de ser posible, un pipeline de Machine Learning para el procesamiento de datos que consideren necesario. Es importante **explicar claramente cada paso realizado** mediante comentarios en el script o textos formato markdown dentro del Notebook, pensar que cualquier persona (en este caso serán los Henry Mentors evaluadores) debe entender de la mejor manera posible cada razonamiento y pasos aplicados.
+Se presenta un  Jupyter Notebook .ipynb, el cual se incluye el  EDA y feature engineerging para el procesamiento de datos . Es importante **explicar claramente cada paso realizado** mediante comentarios en el script o textos formato markdown dentro del Notebook.
+
+​Se ha genereado un archivo .csv  con las predicciones, teniendo únicamente **una sola columna** (sin index) de nombre 'pred' y tenga todos los valores de las predicciones, con un valor por fila. 
 
 ​
-Recuerden, además, que deben enviar el repositorio que contenga el proyecto, por lo que es importante que le dediquen tiempo también a esta parte, dejando todo ordenado y con un README acorde, que sirva de introducción al contenido dentro de éste.
-
-​
-Por otro lado, es obligatorio que el script genere un archivo .csv sólo con las predicciones, teniendo únicamente **una sola columna** (sin index) que debe llamarse 'pred' y tenga todos los valores de las predicciones, con un valor por fila. De no llamarse así la **única columna**, nuestro script de validación **NO LO VA A TOMAR** y no aparecerán en el dashboard.
-
-​
-El nombre del archivo debe ser su usuario de GitHub, si su usuario de GitHub es 'pjr95', el archivo .csv con las predicciones debe llamarse 'pjr95.csv'. Vamos a validar tanto los datos que suban como el código, por lo que seguir estos pasos es fundamental.
-
-​
-Cuando entreguen les pedimos que verifiquen que su usuario de GitHub aparezca en el dashboard. En caso de que no aparezca, tal como se comentó más arriba, es debido a que el archivo entregado con las predicciones no cumple con los requisitos solicitados. 
-
-
-Recuerden que la columna objetivo **no está presente en el dataset**, deben crearla en base a la consigna. Recuerden verificar que el número de columnas del set de datos que utilizan para entrenar el modelo sea igual que el número de columnas que tiene el set de testeo, con el que harán las predicciones.
-
-## **Criterio de evaluación**
-
-Deberán crear un repositorio en GitHub con acceso público donde subirán la solución propuesta en un archivo de Jupyter Notebook (.ipynb) o bien un script de Python (.py) y el archivo de texto plano con valores separados por comas (.csv) con las predicciones. Dicho repositorio deben compartirlo en el formulario de entrega, junto al archivo .csv con las predicciones. Deberán escribir su propio readme, describiendo brevemente el problema y la solución que proponen (no debe ser una simple copia de la consigna del PI).
-
-La solución propuesta debe incluir los siguientes ítems, por cada uno cumplido sumará 1 punto, siendo 1 la nota mínima y 5 la nota máxima:
-
-- Entrenamiento y predicción utilizando un Modelo de Machine Learning adecuado al problema (clasificación o regresión).
-- Análisis exploratorio de los datos (EDA).
-- División de dataset en train y test utilizando train_test_split, CV, KFold o similares.
-- Utilización de Pipelines en la producción del modelo.
-- Comentarios y redacción con la fundamentación de la solución propuesta, escrita en Markdown en el Jupyter Notebook (.ipynb) o bien en un documento aparte.
-
-​
-## **Métrica a utilizar**
+## **Métrica a utilizada**
 ​
 Como método de evaluación del desempeño del modelo, se utilizará la métrica de Exhaustividad (Recall) para las estadías hospitalarias largas, a partir de la matriz de confusión (Confusion Matrix). 
 
@@ -77,7 +48,7 @@ siendo $TP$ los verdaderos positivos, $TN$ verdaderos negativos y $P+N$ poblaci�
 
 
 ​
-## **Archivos provistos**
+## **Archivos de trabajo**
 ​
 Se proveen los siguientes archivos para realizar el proyecto:
  - 'hospitalizaciones_train.csv': Contiene 410000 registros y 15 dimensiones, el cual incluye la información **numérica** de la cantidad de días de estancia hospitalaria.
@@ -100,14 +71,3 @@ Se proveen los siguientes archivos para realizar el proyecto:
 - Admission_Deposit: Pago realizado a nombre del paciente, con el fin de cubrir los costos iniciales de internación. 
 - Stay (in days): Días registrados de estancia hospitalaria. 
 ​
-## **Sugerencias​**
-- Exploren el dataset. Saquen medidas resumen, vean distribuciones de los datos, analicen bien el tipo de problema, etc.
-- Piensen qué tipo de modelo podría ser aplicable según la descripción del problema y el tipo de variable de salida.
-- Busquen información sobre la métrica aplicada, cada métrica tiene pros y contras.
-- En cuanto a la utilización de GitHub, recuerden que si quieren hacer un cambio experimental pero no quieren romper el modelo, pueden utilizar [branching](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
-- Aprovechen esta instancia de aprendizaje, experimenten y, sobre todo, ¡diviértanse!
-
-
-## Disclaimer  
-De parte del equipo de Henry se quiere aclarar y remarcar que los fines de los proyectos propuestos son exclusivamente pedagógicos, con el objetivo de realizar proyectos que simulen un entorno laboral, en el cual se trabajen diversas temáticas ajustadas a la realidad.
- No reflejan necesariamente la filosofía y valores de la organización. Además, Henry no alienta ni tampoco recomienda a los alumnos y/o cualquier persona leyendo los repositorios (y entregas de proyectos) que tomen acciones en base a los datos que pudieran o no haber recabado. Toda la información expuesta y resultados obtenidos en los proyectos, nunca deben ser tomados en cuenta para la toma real de decisiones (especialmente en la temática de finanzas, salud, política, etc.).
